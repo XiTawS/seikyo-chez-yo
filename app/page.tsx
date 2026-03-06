@@ -31,7 +31,7 @@ function Hero() {
   return (
     <section className="relative h-[90vh] overflow-hidden">
       <EditableImage contentKey="home.hero.bg"
-        defaultSrc="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1920&q=80"
+        defaultSrc="https://res.cloudinary.com/dxcudyuno/image/upload/v1772839933/chez-yo/terrasse-plat.jpg"
         alt="Chez Yo !" fill sizes="100vw" priority
         className="object-cover" hideButton inputRef={ref} />
       {isAdmin && (
@@ -99,7 +99,7 @@ function Esprit() {
         <div className="grid md:grid-cols-12 gap-10 items-center">
           <Fade className="md:col-span-5">
             <EditableImage contentKey="home.esprit.image"
-              defaultSrc="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800&q=80"
+              defaultSrc="https://res.cloudinary.com/dxcudyuno/image/upload/v1772839939/chez-yo/cuisine-planche.jpg"
               alt="Ambiance Chez Yo" width={800} height={1000}
               className="w-full aspect-[4/5] object-cover" />
           </Fade>
@@ -149,7 +149,7 @@ function ImageBreak() {
   return (
     <section className="relative h-[35vh] overflow-hidden">
       <EditableImage contentKey="home.break.image"
-        defaultSrc="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=1920&q=80"
+        defaultSrc="https://res.cloudinary.com/dxcudyuno/image/upload/v1772839935/chez-yo/plats-maison.jpg"
         alt="Ambiance" fill sizes="100vw" className="object-cover" hideButton inputRef={ref} />
       {isAdmin && (
         <button onClick={() => ref.current?.click()}
@@ -258,12 +258,12 @@ function Carte() {
 function Gallery() {
   const { openLightbox } = useLightbox();
   const photos = [
-    { key: "g1", src: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80", title: "Planche apéro" },
-    { key: "g2", src: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80", title: "Entrecôte grillée" },
-    { key: "g3", src: "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=600&q=80", title: "Burger maison Yo" },
-    { key: "g4", src: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&q=80", title: "L'ambiance" },
-    { key: "g5", src: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80", title: "Le bar" },
-    { key: "g6", src: "https://images.unsplash.com/photo-1551218808-94e220e084d2?w=600&q=80", title: "La terrasse" },
+    { key: "g1", src: "https://res.cloudinary.com/dxcudyuno/image/upload/v1772839937/chez-yo/planche-huitres.jpg", title: "Planche & huîtres" },
+    { key: "g2", src: "https://res.cloudinary.com/dxcudyuno/image/upload/v1772839938/chez-yo/burger-salade.jpg", title: "Burger maison" },
+    { key: "g3", src: "https://res.cloudinary.com/dxcudyuno/image/upload/v1772839933/chez-yo/desserts-vin.jpg", title: "Desserts & vins" },
+    { key: "g4", src: "https://res.cloudinary.com/dxcudyuno/image/upload/v1772839940/chez-yo/galerie1.jpg", title: "L'ambiance" },
+    { key: "g5", src: "https://res.cloudinary.com/dxcudyuno/image/upload/v1772839941/chez-yo/galerie2.jpg", title: "Entre copains" },
+    { key: "g6", src: "https://res.cloudinary.com/dxcudyuno/image/upload/v1772839935/chez-yo/plats-maison.jpg", title: "Plats du jour" },
   ];
 
   return (
@@ -420,7 +420,7 @@ export default function Home() {
     return (
       <div className="fixed inset-0 bg-[var(--color-bg-dark)] z-[99999] flex items-center justify-center">
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center">
-          <h1 className="font-display text-5xl text-[var(--color-gold)] mb-4">Chez Yo !</h1>
+          <img src="https://res.cloudinary.com/dxcudyuno/image/upload/v1772839931/chez-yo/logo.jpg" alt="Chez Yo !" className="w-20 h-20 rounded-full mx-auto mb-4" />
           <div className="w-8 h-8 border border-[var(--color-gold)] border-t-transparent rounded-full animate-spin mx-auto" />
         </motion.div>
       </div>
